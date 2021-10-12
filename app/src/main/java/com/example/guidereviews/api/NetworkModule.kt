@@ -13,10 +13,10 @@ import java.util.concurrent.TimeUnit
 private const val NETWORK_TIMEOUT = 30L
 
 val networkModule = module {
-    factory { provideHttpLoggingInterceptor() }
-    factory { provideOkHttpClient(get()) }
-    factory { moshi() }
-    factory { provideRetrofitBuilder(get(), get()) }
+    single { provideHttpLoggingInterceptor() }
+    single { provideOkHttpClient(get()) }
+    single { moshi() }
+    single { provideRetrofitBuilder(get(), get()) }
 
 }
 
