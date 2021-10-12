@@ -91,19 +91,7 @@ All the unit tests are passing at the time of completion of the project.
 
 A very basic logic is written for achieving pagination using the scroll listener of the recyclerview.
 
-## If I had more time!!!.
-
-1. Could have implemented offline storage for the app.
-2. Could have implemented sorting functionalities with sort api query parameters.
-3. Could have optimized pagination logic a bit more.
-
-Why I didn't prioritise it in the time I had -> Was focusing more on implementing an architecture which 
-can be scaled in a very clean way and  focused more on writing clean and optimized code without clutters. 
-Also focused more on replicating a similar ui to the design given with identical color codes.
-
-
-
-THANKS FOR READING!!! :) :) :) 
+ 
 
 
 
