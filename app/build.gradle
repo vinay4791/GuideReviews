@@ -1,0 +1,115 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.guidereviews"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+}
+
+def retrofit_version = '2.9.0'
+def rx_android_version = '2.1.1'
+def rx_java_version = '2.2.19'
+def glide_version = '4.12.0'
+def koin_version = "2.2.2"
+def lottie_version = "3.4.2"
+def logging_interceptor_version = "4.9.0"
+def moshi_converter_version = "2.6.0"
+def nav_version = '2.3.5'
+def swipe_refresh_version = '1.1.0'
+def circle_image_library_version = '3.1.0'
+def fragment_ktx_version = '1.3.6'
+def junit_version = '4.13.2'
+def mockito_core_version = '3.11.2'
+def mockito_inline_version = '2.13.0'
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    //Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+
+    //Http Logging Interceptor
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
+
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
+
+    // Koin
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+
+    //Image loading framework
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
+    //Moshi Converter
+    implementation "com.squareup.retrofit2:converter-moshi:$moshi_converter_version"
+
+    //Progress Bar
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
+    //Swipe Refresh Layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_version"
+
+    //Circular ImageView
+    implementation "de.hdodenhof:circleimageview:$circle_image_library_version"
+
+    //testing
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+
+    //mockito
+    testImplementation "org.mockito:mockito-core:$mockito_core_version"
+    testImplementation "org.mockito:mockito-inline:$mockito_inline_version"
+
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
+    testImplementation "com.google.truth:truth:1.0"
+    
+}

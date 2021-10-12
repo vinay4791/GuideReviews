@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GuideReviews</string>
+
+    <string name="no_internet_connection_message">No Internet Connection</string>
+    <string name="server_error">Server Error</string>
+    <string name="unknown_error">Unknown Error</string>
+
+    <string name="error_string">Something went wrong!!! Please reconnect your internet or refresh or try again later</string>
+    <string name="text_api_loading_error">Error in loading data!!! \n Please check your internet connection or refresh the screen. \n Thankyou.</string>
+    <string name="reviewed_by_text">reviewed by</string>
+
+    <string name="reviews_text">Reviews</string>
+    <string name="reviews_details_text">Review details</string>
+
+</resources>

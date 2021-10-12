@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_20dp">
+
+    <TextView
+        android:id="@+id/review_date_tv"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:textColor="@color/date_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="April 8,2020" />
+
+    <RatingBar
+        android:id="@+id/review_rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:theme="@style/RatingBar"
+        app:layout_constraintStart_toStartOf="@id/review_date_tv"
+        app:layout_constraintTop_toBottomOf="@id/review_date_tv" />
+
+    <TextView
+        android:id="@+id/review_message_tv"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_6dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:textColor="@color/message_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/review_rating"
+        app:layout_constraintTop_toBottomOf="@id/review_rating"
+        tools:text="This is a sample review message" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/review_author_iv"
+        android:layout_width="@dimen/dimen_48dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_marginTop="@dimen/dimen_6dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toStartOf="@id/review_message_tv"
+        app:layout_constraintTop_toBottomOf="@id/review_message_tv" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/review_author_iv"
+        app:layout_constraintStart_toEndOf="@id/review_author_iv"
+        app:layout_constraintTop_toTopOf="@id/review_author_iv">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reviewed_by_text"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/review_author_name_country_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            tools:text="Author - Country" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_half_dp"
+        android:layout_marginTop="@dimen/dimens_16dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/review_author_iv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

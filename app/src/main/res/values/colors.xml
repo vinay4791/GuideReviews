@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ff5532</color>
+    <color name="colorPrimaryVariant">#ff5532</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorSecondary">@color/teal_200</color>
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="loader_bg_white_transparent">#B3FFFFFF</color>
+
+    <color name="message_text_color">#0e121b</color>
+    <color name="name_text_color">#858609</color>
+    <color name="date_text_color">#65686d</color>
+
+    <color name="rating_bar_grey">#85898a</color>
+    <color name="rating_bar_yellow">#f7d653</color>
+
+</resources>
